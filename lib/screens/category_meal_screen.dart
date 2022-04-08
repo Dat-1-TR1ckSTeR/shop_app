@@ -8,12 +8,6 @@ class CategoryMealScreen extends StatelessWidget {
   static const routeName = '/category-meal';
 
   const CategoryMealScreen({Key? key}) : super(key: key);
-  // final String categoryId;
-  // final String categoryTitle;
-
-  // const CategoryMealScreen(
-  //     {Key? key, required this.categoryId, required this.categoryTitle})
-  //     : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +25,7 @@ class CategoryMealScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemBuilder: (context, index) => MealItem(
+          id: categoryMeals[index].id,
           title: categoryMeals[index].title,
           imageUrl: categoryMeals[index].imageUrl,
           duration: categoryMeals[index].duration,
